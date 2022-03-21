@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "Ecommerce"
+version = "0.1.0"
+description = ""
+authors = ["Ueslei Carvalho <uesleicdoliveira@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = {version = "^1.9.0", extras = ["dotenv"]}
+python-jose = {version = "^3.3.0", extras = ["cryptography"]}
+passlib = {version = "^1.7.4", extras = ["bcrypt"]}
+pytz = "^2021.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+black = "^22.1.0"
+pytest-coverage = "^0.0"
+pytest-mock = "^3.7.0"
+factory-boy = "^3.2.1"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
